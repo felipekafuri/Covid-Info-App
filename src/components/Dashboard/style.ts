@@ -5,7 +5,7 @@ export const InfoContainer = styled.div`
   background-color: #ffff;
   max-width: 650px;
   width: 100%;
-  height: 400px;
+  height: 500px;
   border-radius: 10px;
   margin: 0 auto;
   display: flex;
@@ -67,91 +67,29 @@ export const Form = styled.form`
   }
 `;
 
-export const Table = styled.table`
-  width: 100%;
-  max-width: 350px;
+export const Result = styled.div`
+  width: 50%;
+  height: 50px;
+  background-color: #fff;
+  border: 1px solid rgba(55, 55, 55, 0.15);
+  border-radius: 10px;
+  color: #333333;
+  font-weight: 400;
+  font-size: 24px;
+  padding: 10px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   @media (max-width: 500px) {
-    transform: scale(0.55);
+    width: 90%;
   }
-  th {
-    color: #d5dde5;
-    background: #333333;
-    border-bottom: 4px solid #9ea7af;
-    border-right: 1px solid #343a45;
-    font-size: 18px;
-    font-weight: 500;
-    text-align: left;
-    padding: 12px;
-  }
-  th:first-child {
-    border-top-left-radius: 3px;
-  }
+`;
 
-  th:last-child {
-    border-top-right-radius: 3px;
-    border-right: none;
-  }
-
-  tr {
-    border-top: 1px solid #c1c3d1;
-    border-bottom: 1px solid #c1c3d1;
-    color: #666b85;
-    font-size: 16px;
-    font-weight: normal;
-    text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
-  }
-
-  tr:first-child {
-    border-top: none;
-  }
-
-  tr:last-child {
-    border-bottom: none;
-  }
-
-  tr:nth-child(odd) td {
-    background: #ebebeb;
-  }
-
-  tr:last-child td:first-child {
-    border-bottom-left-radius: 3px;
-  }
-
-  td {
-    background: #ffffff;
-    padding: 20px;
-    text-align: left;
-    vertical-align: middle;
-    font-weight: 300;
-    font-size: 18px;
-    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
-    border-right: 1px solid #c1c3d1;
-  }
-  td:last-child {
-    border-right: 0px;
-  }
-
-  th.text-left {
-    text-align: left;
-  }
-
-  th.text-center {
-    text-align: center;
-  }
-
-  th.text-right {
-    text-align: right;
-  }
-
-  td.text-left {
-    text-align: left;
-  }
-
-  td.text-center {
-    text-align: center;
-  }
-
-  td.text-right {
-    text-align: right;
-  }
+export const SubTitle = styled.h3`
+  text-align: center;
+  font-size: 16px;
+  color: #333333;
+  font-weight: bold;
+  width: 100%;
 `;

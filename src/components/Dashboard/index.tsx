@@ -1,6 +1,6 @@
 import React, { useState, FormEvent } from 'react';
 
-import { InfoContainer, Title, Form, Table } from './style';
+import { InfoContainer, Title, Form, Result, SubTitle } from './style';
 import api from '../../service/api';
 
 interface StatistcObject {
@@ -35,26 +35,16 @@ const Dashboard: React.FC = () => {
           Cases in:
           {countryStatistics?.country}
         </Title>
-        <Table>
-          <thead>
-            <tr>
-              <th>Confirmed Cases</th>
-              <th>Recovered Cases</th>
-              <th>Critical number</th>
-              <th>Deaths</th>
-              <th>Last Update</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>{countryStatistics?.confirmed}</td>
-              <td>{countryStatistics?.recovered}</td>
-              <td>{countryStatistics?.critical}</td>
-              <td>{countryStatistics?.deaths}</td>
-              <td>{countryStatistics?.lastUpdate}</td>
-            </tr>
-          </tbody>
-        </Table>
+        <SubTitle>Confirmed Cases:</SubTitle>
+        <Result>{countryStatistics?.confirmed}</Result>
+        <SubTitle>Recovered Cases:</SubTitle>
+        <Result>{countryStatistics?.recovered}</Result>
+        <SubTitle>Critical Cases:</SubTitle>
+        <Result>{countryStatistics?.critical}</Result>
+        <SubTitle>Deaths:</SubTitle>
+        <Result>{countryStatistics?.deaths}</Result>
+        <SubTitle>Last Update:</SubTitle>
+        <Result>{countryStatistics?.lastUpdate.slice(0, -15)}</Result>
       </InfoContainer>
 
       <Form onSubmit={handleInfoCovid}>

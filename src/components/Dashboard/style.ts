@@ -8,20 +8,26 @@ export const InfoContainer = styled.div`
   height: 400px;
   border-radius: 10px;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 export const Title = styled.h1`
   text-align: center;
   font-size: 36px;
   color: #333333;
-  margin-bottom: 70px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  width: 100%;
 `;
 
 export const Form = styled.form`
   display: flex;
   margin: 32px auto;
   max-width: 650px;
-
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 
   input {
@@ -31,6 +37,9 @@ export const Form = styled.form`
     height: 70px;
     border-radius: 5px 0 0 5px;
     font-size: 24px;
+    @media (max-width: 500px) {
+      border-radius: 5px 5px 5px 5px;
+    }
     &::placeholder {
       color: #a8a8b3;
     }
@@ -50,14 +59,20 @@ export const Form = styled.form`
     &:hover {
       background: ${shade(0.2, '#0074e4')};
     }
+    @media (max-width: 500px) {
+      width: 100%;
+      margin-top: 32px;
+      border-radius: 5px 5px 5px 5px;
+    }
   }
 `;
 
 export const Table = styled.table`
   width: 100%;
   max-width: 350px;
-  margin: auto;
-
+  @media (max-width: 500px) {
+    transform: scale(0.55);
+  }
   th {
     color: #d5dde5;
     background: #333333;
